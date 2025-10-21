@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nike Lunar Gato II | Loja Oficial</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #000;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff3b30;
+    }
+
+    .banner {
+      background: linear-gradient(135deg, #000, #222);
+      color: #fff;
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+
+    .banner h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .banner p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .product {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+      background: #fff;
+    }
+
+    .product img {
+      width: 400px;
+      max-width: 90%;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      transition: 0.4s;
+    }
+
+    .product img:hover {
+      transform: scale(1.05);
+    }
+
+    .details {
+      max-width: 500px;
+      margin-left: 3rem;
+    }
+
+    .details h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #111;
+    }
+
+    .details p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .price {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ff3b30;
+      margin-bottom: 1.5rem;
+    }
+
+    button {
+      background: #ff3b30;
+      color: #fff;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #e63229;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #000;
+      color: #fff;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .product {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .details {
+        margin-left: 0;
+        margin-top: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nike Store</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Lançamentos</a>
+      <a href="#">Promoções</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h2>Nike Lunar Gato II</h2>
+    <p>Domine o futsal com conforto, precisão e estilo incomparável.</p>
+  </section>
+
+  <section class="product">
+    <img src="https://static.nike.com/a/images/t_default/7e27ef36-5e88-4dbb-9c1f-33da07e4fdf9/lunar-gato-ii-futsal-shoes-dMFGCq.png" alt="Nike Lunar Gato II">
+    <div class="details">
+      <h3>Chuteira Nike Lunar Gato II</h3>
+      <p>
+        A Nike Lunar Gato II é feita para o jogador que busca conforto e toque preciso. 
+        O cabedal em couro premium proporciona controle refinado da bola, enquanto o amortecimento Lunarlon garante resposta suave e ágil nas quadras.
+      </p>
+      <p class="price">R$ 649,99</p>
+      <button onclick="comprar()">Comprar Agora</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Nike Store. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function comprar() {
+      alert("🛒 Produto adicionado ao carrinho com sucesso!");
+    }
+  </script>
+</body>
+</html>
