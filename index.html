@@ -105,7 +105,7 @@
         const card = document.createElement("div");
         card.classList.add("card");
         card.innerHTML = `
-          <img src="${p.img}" alt="${p.name}">
+          <img src="${p.img}" alt="${p.name}" onerror="this.src='https://via.placeholder.com/250x220?text=Imagem+Indisponivel'">
           <div class="card-content">
             <h3>${p.name}</h3>
             <p>Conforto, performance e estilo para quadras de futsal.</p>
