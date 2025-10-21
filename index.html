@@ -14,7 +14,6 @@
     .banner {background: linear-gradient(135deg, #000, #222); color: #fff; text-align: center; padding: 4rem 1rem;}
     .banner h2 {font-size: 2.5rem; margin-bottom: 1rem;}
     .banner p {font-size: 1.1rem; color: #ccc;}
-
     .products {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; padding: 3rem; max-width: 1200px; margin: auto;}
     .card {background: #fff; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); overflow: hidden; transition: 0.3s;}
     .card:hover {transform: scale(1.05);}
@@ -25,17 +24,12 @@
     .price {color: #ff3b30; font-size: 1.2rem; font-weight: bold;}
     button {background: #ff3b30; color: #fff; border: none; padding: 0.6rem 1.2rem; border-radius: 50px; font-size: 0.9rem; cursor: pointer; transition: 0.3s; margin-top: 0.5rem;}
     button:hover {background: #e63229;}
-
     footer {text-align: center; padding: 2rem; background: #000; color: #fff; margin-top: 3rem;}
-
-    /* Carrinho */
     .cart {position: fixed; top: 20%; right: 0; background: #fff; border-radius: 10px 0 0 10px; box-shadow: -5px 5px 15px rgba(0,0,0,0.2); width: 300px; max-height: 400px; overflow-y: auto; padding: 1rem; display: none; z-index: 999;}
     .cart h4 {margin-bottom: 1rem; text-align: center;}
     .cart-item {display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; border-bottom: 1px solid #eee; padding-bottom: 4px;}
     .cart-item button {background: none; border: none; color: red; cursor: pointer; font-size: 1rem;}
     .cart-total {font-weight: bold; margin-top: 1rem; text-align: right;}
-
-    /* Botões flutuantes */
     .support-btn {position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 1000;}
     .support-btn a {display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; border-radius: 50%; color: #fff; font-size: 24px; text-decoration: none; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.2);}
     .support-btn a.whatsapp {background: #25D366;}
@@ -59,9 +53,7 @@
     <p>Modelos profissionais, conforto e estilo para dominar as quadras!</p>
   </section>
 
-  <section class="products" id="product-list">
-    <!-- Os produtos serão inseridos via JavaScript -->
-  </section>
+  <section class="products" id="product-list"></section>
 
   <div class="cart" id="cart">
     <h4>🛒 Seu Carrinho</h4>
@@ -80,21 +72,21 @@
 
   <script>
     const products = [
-      { name: "Nike Lunar Gato II Roxo/Preto", price: 649.99, img: "https://i.imgur.com/ceGzh4y.jpeg" },
-      { name: "Adidas Top Sala", price: 579.90, img: "https://i.imgur.com/BOQjMcB.jpeg" },
-      { name: "Puma Future Z 4.4 IT", price: 499.99, img: "https://i.imgur.com/mwkVk3u.jpeg" },
-      { name: "Nike React Gato", price: 699.99, img: "https://i.imgur.com/3mXJxAi.jpeg" },
-      { name: "Umbro Chaleira Pro 3", price: 429.99, img: "https://i.imgur.com/JNskLxH.jpeg" },
-      { name: "Adidas Copa Sense Sala", price: 599.99, img: "https://i.imgur.com/fyy1Ecz.jpeg" },
-      { name: "Mizuno Morelia Indoor", price: 689.90, img: "https://i.imgur.com/6PQFZ5T.jpeg" },
-      { name: "Penalty Bravo XXI", price: 349.99, img: "https://i.imgur.com/WmEVeXv.jpeg" },
-      { name: "Nike Tiempo Legend 10 IC", price: 719.99, img: "https://i.imgur.com/1t89gDu.jpeg" },
-      { name: "Adidas X Speedflow Sala", price: 649.99, img: "https://i.imgur.com/t1vTqJA.jpeg" },
-      { name: "Puma Ultra Match IT", price: 559.99, img: "https://i.imgur.com/hm7n9Wk.jpeg" },
-      { name: "Nike Streetgato", price: 489.99, img: "https://i.imgur.com/3eHkX2g.jpeg" },
-      { name: "Umbro Velocita Alchemist", price: 499.90, img: "https://i.imgur.com/HtFz62b.jpeg" },
-      { name: "Adidas Predator Accuracy IC", price: 729.99, img: "https://i.imgur.com/y4XbHpd.jpeg" },
-      { name: "Nike Lunargato White Edition", price: 659.99, img: "https://i.imgur.com/bb8QUzi.jpeg" }
+      { name: "Nike Lunar Gato II Roxo/Preto", price: 649.99, img: "https://i.ibb.co/4YdL2w5/nike-lunargato.jpg" },
+      { name: "Adidas Top Sala", price: 579.90, img: "https://i.ibb.co/mbh2sPt/adidas-top-sala.jpg" },
+      { name: "Puma Future Z 4.4 IT", price: 499.99, img: "https://i.ibb.co/4Y9smHc/puma-future-z.jpg" },
+      { name: "Nike React Gato", price: 699.99, img: "https://i.ibb.co/Yh1r9Kn/nike-react-gato.jpg" },
+      { name: "Umbro Chaleira Pro 3", price: 429.99, img: "https://i.ibb.co/tsVb7G3/umbro-chaleira.jpg" },
+      { name: "Adidas Copa Sense Sala", price: 599.99, img: "https://i.ibb.co/HCp28pF/adidas-copa.jpg" },
+      { name: "Mizuno Morelia Indoor", price: 689.90, img: "https://i.ibb.co/xqLZ3Vt/mizuno-morelia.jpg" },
+      { name: "Penalty Bravo XXI", price: 349.99, img: "https://i.ibb.co/fdXH7Xq/penalty-bravo.jpg" },
+      { name: "Nike Tiempo Legend 10 IC", price: 719.99, img: "https://i.ibb.co/TwYx9mr/nike-tiempo.jpg" },
+      { name: "Adidas X Speedflow Sala", price: 649.99, img: "https://i.ibb.co/SvR6skH/adidas-x.jpg" },
+      { name: "Puma Ultra Match IT", price: 559.99, img: "https://i.ibb.co/JkFzGkN/puma-ultra.jpg" },
+      { name: "Nike Streetgato", price: 489.99, img: "https://i.ibb.co/hY5xQq1/nike-streetgato.jpg" },
+      { name: "Umbro Velocita Alchemist", price: 499.90, img: "https://i.ibb.co/4TB2PfH/umbro-velocita.jpg" },
+      { name: "Adidas Predator Accuracy IC", price: 729.99, img: "https://i.ibb.co/tX2D0rT/adidas-predator.jpg" },
+      { name: "Nike Lunargato White Edition", price: 659.99, img: "https://i.ibb.co/DkYfM5s/nike-lunargato-white.jpg" }
     ];
 
     let cart = [];
