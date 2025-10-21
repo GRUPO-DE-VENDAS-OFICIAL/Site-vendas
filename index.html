@@ -9,12 +9,13 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
     body {
-      background: #f5f5f5;
+      background: #f7f7f7;
       color: #222;
     }
+
     header {
       background: #000;
       color: #fff;
@@ -24,9 +25,10 @@
       padding: 1rem 2rem;
       position: sticky;
       top: 0;
+      z-index: 1000;
     }
     header h1 {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       letter-spacing: 1px;
     }
     nav a {
@@ -39,20 +41,22 @@
     nav a:hover {
       color: #ff3b30;
     }
+
     .banner {
       background: linear-gradient(135deg, #000, #222);
       color: #fff;
       text-align: center;
-      padding: 4rem 1rem;
+      padding: 5rem 1rem;
     }
     .banner h2 {
-      font-size: 2.5rem;
+      font-size: 2.7rem;
       margin-bottom: 1rem;
     }
     .banner p {
       font-size: 1.1rem;
       color: #ccc;
     }
+
     .product {
       display: flex;
       flex-wrap: wrap;
@@ -60,9 +64,14 @@
       justify-content: center;
       padding: 3rem 2rem;
       background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin: 2rem auto;
+      width: 90%;
+      max-width: 1000px;
     }
     .product img {
-      width: 400px;
+      width: 420px;
       max-width: 90%;
       border-radius: 20px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
@@ -71,8 +80,9 @@
     .product img:hover {
       transform: scale(1.05);
     }
+
     .details {
-      max-width: 500px;
+      max-width: 480px;
       margin-left: 3rem;
     }
     .details h3 {
@@ -92,6 +102,7 @@
       color: #ff3b30;
       margin-bottom: 1.5rem;
     }
+
     button {
       background: #ff3b30;
       color: #fff;
@@ -101,11 +112,13 @@
       font-size: 1rem;
       cursor: pointer;
       transition: 0.3s;
+      margin-right: 10px;
     }
     button:hover {
       background: #e63229;
       transform: scale(1.05);
     }
+
     footer {
       text-align: center;
       padding: 2rem;
@@ -113,6 +126,80 @@
       color: #fff;
       margin-top: 3rem;
     }
+
+    /* Carrinho */
+    .cart {
+      position: fixed;
+      top: 20%;
+      right: 0;
+      background: #fff;
+      border-radius: 10px 0 0 10px;
+      box-shadow: -5px 5px 15px rgba(0,0,0,0.2);
+      width: 300px;
+      max-height: 400px;
+      overflow-y: auto;
+      padding: 1rem;
+      display: none;
+      z-index: 999;
+    }
+    .cart h4 {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 4px;
+    }
+    .cart-item button {
+      background: none;
+      border: none;
+      color: red;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .cart-total {
+      font-weight: bold;
+      margin-top: 1rem;
+      text-align: right;
+    }
+
+    /* Botões de suporte */
+    .support-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1000;
+    }
+    .support-btn a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 24px;
+      text-decoration: none;
+      transition: 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .support-btn a.whatsapp {
+      background: #25D366;
+    }
+    .support-btn a.email {
+      background: #D44638;
+    }
+    .support-btn a:hover {
+      transform: scale(1.1);
+    }
+
     @media (max-width: 768px) {
       .product {
         flex-direction: column;
@@ -121,6 +208,12 @@
       .details {
         margin-left: 0;
         margin-top: 2rem;
+      }
+      .cart {
+        width: 90%;
+        right: 5%;
+        top: auto;
+        bottom: 10%;
       }
     }
   </style>
@@ -135,28 +228,64 @@
       <a href="#">Contato</a>
     </nav>
   </header>
+
   <section class="banner">
     <h2>Nike Lunar Gato II</h2>
     <p>Domine o futsal com conforto, precisão e estilo incomparável.</p>
   </section>
+
   <section class="product">
-    <img src="https://static.nike.com/a/images/t_default/7e27ef36-5e88-4dbb-9c1f-33da07e4fdf9/lunar-gato-ii-futsal-shoes-dMFGCq.png" alt="Nike Lunar Gato II">
+    <!-- 🖼️ Sua imagem do modelo roxo e preto -->
+    <img src="nike-lunar-gato-modelo.jpg" alt="Nike Lunar Gato II Roxo e Preto">
     <div class="details">
-      <h3>Chuteira Nike Lunar Gato II</h3>
-      <p>
-        A Nike Lunar Gato II é feita para o jogador que busca conforto e toque preciso. 
-        O cabedal em couro premium proporciona controle refinado da bola, enquanto o amortecimento Lunarlon garante resposta suave e ágil nas quadras.
-      </p>
+      <h3>Chuteira Nike Lunar Gato II - Roxo e Preto</h3>
+      <p>A Nike Lunar Gato II é feita para o jogador que busca conforto e toque preciso. O cabedal em couro premium proporciona controle refinado da bola, enquanto o amortecimento Lunarlon garante resposta suave e ágil nas quadras.</p>
+      <p>Modelo exclusivo na cor <strong>roxo e preto</strong> com design moderno e performance profissional.</p>
       <p class="price">R$ 649,99</p>
-      <button onclick="comprar()">Comprar Agora</button>
+      <button onclick="addToCart('Nike Lunar Gato II - Roxo e Preto', 649.99)">Adicionar ao Carrinho</button>
     </div>
   </section>
+
+  <div class="cart" id="cart">
+    <h4>🛒 Seu Carrinho</h4>
+    <div id="cart-items"></div>
+    <div class="cart-total" id="cart-total">Total: R$ 0.00</div>
+  </div>
+
   <footer>
     <p>© 2025 Nike Store. Todos os direitos reservados.</p>
   </footer>
+
+  <div class="support-btn">
+    <a href="https://wa.me/5551998854935" class="whatsapp" target="_blank" title="Suporte via WhatsApp">💬</a>
+    <a href="mailto:samuka05.01.13@gmail.com" class="email" target="_blank" title="Suporte via E-mail">✉️</a>
+  </div>
+
   <script>
-    function comprar() {
-      alert("🛒 Produto adicionado ao carrinho com sucesso!");
+    let cart = [];
+    function addToCart(name, price) {
+      cart.push({ name, price });
+      updateCart();
+    }
+
+    function updateCart() {
+      const cartItems = document.getElementById('cart-items');
+      cartItems.innerHTML = '';
+      let total = 0;
+      cart.forEach((item, index) => {
+        total += item.price;
+        const div = document.createElement('div');
+        div.classList.add('cart-item');
+        div.innerHTML = `<span>${item.name}</span><span>R$ ${item.price.toFixed(2)}</span> <button onclick="removeFromCart(${index})">❌</button>`;
+        cartItems.appendChild(div);
+      });
+      document.getElementById('cart-total').innerText = \`Total: R$ \${total.toFixed(2)}\`;
+      document.getElementById('cart').style.display = cart.length ? 'block' : 'none';
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      updateCart();
     }
   </script>
 </body>
